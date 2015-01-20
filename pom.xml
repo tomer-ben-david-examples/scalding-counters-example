@@ -2,7 +2,7 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.apache.incubator.kafka</groupId>
-    <artifactId>kafka-scala210</artifactId>
+    <artifactId>scalding-example</artifactId>
     <packaging>jar</packaging>
     <version>0.7.2</version>
 
@@ -63,13 +63,21 @@
     </reporting>
 
     <dependencies>
-
-<dependency>
-	<groupId>com.twitter</groupId>
-	<artifactId>scalding-core_${scala.major.version}</artifactId>
-	<version>0.12.0</version>
-</dependency>
-
+        <dependency>
+            <groupId>com.twitter</groupId>
+            <artifactId>scalding-core_${scala.major.version}</artifactId>
+            <version>0.12.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.twitter</groupId>
+            <artifactId>scalding-commons_${scala.major.version}</artifactId>
+            <version>0.12.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-core</artifactId>
+            <version>1.2.1</version>
+        </dependency>
     </dependencies>
 
     <repositories>
