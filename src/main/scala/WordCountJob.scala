@@ -15,7 +15,6 @@ class WordCountJob(args : Args) extends Job(args) {
      }
     .groupBy { word => word }
     .size
-    .toTypedPipe
     .write(TypedTsv(args("output")))
 
 }
