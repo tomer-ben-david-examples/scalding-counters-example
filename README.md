@@ -8,7 +8,7 @@ class ScaldingCounterExampleJob(args : Args) extends Job(args) {
 ```
 
 ## Use the counter
-```
+```scala
   TypedPipe.from("is alice really alice ?".split(" "))
     .flatMap {
       line => {
