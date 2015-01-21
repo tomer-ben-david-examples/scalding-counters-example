@@ -5,7 +5,7 @@ import com.twitter.scalding._
  * @author tomerb
  * on 20/01/15.
  */
-class WordCountJob(args : Args) extends Job(args) {
+class ScaldingCounterExampleJob(args : Args) extends Job(args) {
   val stat = Stat("alice-counter")
   TypedPipe.from("is alice really alice ?".split(" "))
     .flatMap {
@@ -17,8 +17,4 @@ class WordCountJob(args : Args) extends Job(args) {
     .size
     .write(TypedTsv(args("output")))
 
-}
-
-object MyUniqueID {
-  val value = UniqueID.getRandom
 }
