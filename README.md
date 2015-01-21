@@ -15,14 +15,14 @@ class ScaldingCounterExampleJob(args : Args) extends Job(args) {
         stat.inc
 ```        
 
-## Run the example with:
+## Run the example
 ```
 Main class: com.twitter.scalding.Tool
 VM options: -Xmx1024m
 Program arguments: ScaldingCounterExampleJob --local --output output.txt
 ```
 
-## In result see the counter
+## See resulting counter
 
 ```
 Dumping custom counters:
